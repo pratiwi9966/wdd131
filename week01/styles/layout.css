@@ -1,0 +1,67 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #2f2f2f;
+    color:#ffff;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom:15px; 
+    /*adds 15 pixels of empty space below the <h1> element.*/
+}
+
+nav ul {
+    list-style: none; /*removes the default bullet points that <ul> lists normally have.*/
+    display: flex;/*makes your navigation menu horizontal*/
+    justify-content: space-around; /*Gives the nav bar a black background*/
+    background-color: #000;/*Gives the nav bar a black background*/
+    padding: 15px 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color:#ffcc00;
+}
+
+main {
+    display: flex;
+    /*Flexbox arranges items horizontally (side by side).*/
+    min-height: 60vh;
+    /*the <main> area is at least 60% as tall as the browser window*/
+}
+
+section {
+    flex: 3;
+    background-color: #cfcfcf;
+    padding: 20px;
+}
+
+aside {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+}
+
+footer {
+  background-color: #2f2f2f;
+  color: white;
+  text-align: center;
+  padding: 60px;
+  font-weight: 600;
+}
