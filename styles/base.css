@@ -1,0 +1,136 @@
+:root {
+    --main-color: #2f2f2f;
+}
+
+/*---------General Styles-----------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-m {
+    gap: 10px;
+}
+
+.gap-l {
+    gap: 20px;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*---------Header-----------------*/
+header {
+    background-color: var(--main-color);
+    color:#ffff;
+}
+
+#course-title {
+    display: block; /* Center the logo/title */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    /* padding: 12px; */
+    /*this way you have to click the word directly */
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        /*make the link bigger easier to click,look more like a box*/
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+    }
+
+    a:hover {
+        background-color: #8ea39d;
+        color:#D9DFE3;
+    }
+}
+
+/*---------Main-----------------*/
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+
+    /* h1 {
+        text-align: center;
+    } */
+}
+
+#columns {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 15px;
+}
+
+
+.card {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden; /*anything inside this card is hidden if it goes outside*/
+
+    h2 {
+       background-color: var(--main-color); 
+       /* border-radius: 10px; */
+       color:#ffff;
+       padding: 10px;
+       text-align: center;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    #web-resources {
+        display: flex;
+        align-items: center;
+        /* justify-content:center; */
+    }
+}
+
+#hometown {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--main-color); /* 1px寬度，實線，灰色 */
+    padding-bottom: 5px; /* 讓文字和底線之間有5px的間距 */
+    margin: 20px;
+}
+
+#profile-picture {
+    height: 200px;
+    position: relative;
+}
+
+#flag {
+    font-style:italic;
+    img {
+       height: 120px; 
+    }
+}
+
+/*---------Footer-----------------*/
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-weight: 600;
+}

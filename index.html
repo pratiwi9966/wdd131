@@ -3,11 +3,80 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-
-        
+        <meta name="description" content="WDD 131-Dynamic Web Fundamentals - Wei-Ling Sun-home page">
+        <meta name="author" content="Wei-Ling Sun">
+        <title>WDD 131 - Dynamic Web Fundamentals - WeiLing Sun</title>
+        <link rel="stylesheet" href="../styles/base.css">
+        <script src="scripts/getdates.js" defer></script>
     </head>
+
     <body>
+         <header> 
+            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+            <nav>
+                <a href="https://www.linkedin.com/in/sun-weiling/">LinkedIn</a>
+                <a href="https://byupw.instructure.com/.">Canvas</a></li>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
+                <a href="#">Final Project </a>
+            </nav>   
+        </header>  
+
+        <main>
+            <h1>Wei-Ling Sun</h1>
+            <div id="columns">
+                <section class="card"> 
+                    <h2>About Me</h2>
+                    <div class="card-content">
+                        <div class="flex gap-l">
+                            <p>
+                                My name is WeiLing Sun. I grew up in Taiwan and moved to Utah four years ago. 
+                                I live in Davis County. I'm a mother and a homemaker. 
+                                I'm still learning English and hope to speak it more confidently, 
+                                and the BYU-Pathway program is helping me keep improving. 
+                                I have a BS and an MS in Mechanics-related Engineering, 
+                                and I'm interested in learning more about Software Development. 
+                                I want to be better prepared and see if there might be an opportunity for 
+                                a related job in the future. 
+                            </p>
+                            <img id="profile-picture" src="images/profile-picture.jpg" alt="profile picture">
+                        </div>
+
+                        <h3 id="hometown">Taiwan</h3>
+                        <div class="flex gap-l">
+                            <figure id="flag">
+                                <img src="images/Flag.webp" alt="Taiwan's flag">
+                                <figcaption>Official flag of Taiwan</figcaption>
+                            </figure>
+                            <p> 
+                                Taiwan, officially the Republic of China, is a country in East Asia. 
+                                The main island of Taiwan, also known as Formosa, lies between the East and 
+                                South China Seas in the northwestern Pacific Ocean, with the People's 
+                                Republic of China to the northwest, Japan to the northeast, and the Philippines 
+                                to the south. (Wikipedia)
+                            </p> 
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Web Dev Resources</h2>
+                    <div class="card-content" id="web-resources">
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">MDN</a></li>
+                            <li><a href="https://squoosh.app/">Squoosh</a></li>
+                            <li><a href="#">Scripture</a></li>
+                            <li><a href="#">Final Project </a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; <span id="currentYear"></span> 🎃 WeiLing Sun - Republic of China 🎃 Taiwan</p>
+            <p id="lastModified"></p>
+        </footer>
+
         
     </body>
 </html>
