@@ -1,0 +1,13 @@
+@media screen and (min-width: 500px) {
+    header {
+        background-color: #000;
+        color: #fff;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/*螢幕寬度要至少大於(min-width: 499px )才會使用這裡的功能*/
