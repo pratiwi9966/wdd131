@@ -1,21 +1,34 @@
-
+/*-------------------Learning Activity3: Document Object Model-----------------------------*/
 /*--declare three (3) variables that hold references to the input, button, and list elements.--*/
-const input = document.querySelector("#favchap");
-const button = document.querySelector('button');
-const list = document.querySelector('______');
-//you need to fill in the blank to reference the HTML element that is a unordered list element.
+const input = document.querySelector("#favchap"); // The text input field
+const button = document.querySelector('button'); // The "Add Chapter" button
+const list = document.querySelector('ul'); // The list where items will be added
 
-/*--Create a li element that will hold each entry's chapter title and an associated delete button.--*/
-const li = document.createElement('li');
-/*--Create a delete button-- */
-const deletButton = document.createElement('button');
+/*-------------------Learning Activity4: Handling DOM Events-----------------------------*/
+/*--Create a click event listener for the"Add Chapter button" using an addEventListener.--*/
+button.addEventListener('click', function () { 
 
-/*--Populate the li element variable's textContent or innerHTML with the input value.-- */
-li.textContent = input.value;
-/*--Populate the button textContent with a ❌. --*/
-deleteButton.textContent = '❌';
+    // Check to make sure the input is not blank
+    if (input.value.trim() !== '') {
 
-/*--Append the li element variable with the delete button--*/
-li.append(deleteButton);
-/*--Append the li element variable to the unordered list in your HTML.--*/
-list.append(li);
+        //Create a new li and delete button each time button is clicked
+        const li = document.createElement('li'); // Create a new list item
+        const deleteButton = document.createElement('button'); // Create a delete button
+
+         //Add content to the elements
+        li.textContent = input.value;  // Set list item text to user's input
+        deleteButton.textContent = '❌'; // Give the delete button an emoji or symbol
+
+        //Add event listener to delete button (removes the li when clicked)
+        deleteButton.addEventListener('click', function () {
+            list.removeChild(li); // remove that specific list item
+            input.value = '';  // Empty the text box
+            input.focus();  // refocus the input field(Move cursor back to input)
+        });
+
+        // Append the delete button to the list item, and the list item to the list
+        li.append(deleteButton);
+        list.append(li);
+     }
+})
+
