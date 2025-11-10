@@ -2,6 +2,7 @@
 :root {
     --background-color: #0b1838;
     --text-color: #c8ddf5;
+    --strong-color: #eaedff;
     --havor-background-color: #3a60a0;
 }
 
@@ -29,6 +30,7 @@ header {
 
     strong {
         font-size: 3rem;
+        color: var(--strong-color);
     }
 }
 
