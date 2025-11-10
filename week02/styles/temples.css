@@ -3,8 +3,6 @@
     --background-color: #0b1838;
     --text-color: #c8ddf5;
     --havor-background-color: #3a60a0;
-    
-   
 }
 
 /*---------General Styles-----------------*/
@@ -121,7 +119,6 @@ main {
 }
 
 /*---------Footer-----------------*/
-
 footer {
     background-color: var(--background-color);
     color: var(--text-color);
