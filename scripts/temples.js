@@ -22,3 +22,5 @@ document.getElementById("currentYear").textContent = currentYear;
 // Show the document’s last modified date/time
 //    (Using the built-in document.lastModified property)
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+
+
