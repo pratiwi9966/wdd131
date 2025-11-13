@@ -1,5 +1,14 @@
+/* Universal Selector */
+/* * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} */
+
+/* HTML Element Selectors */
 body {
 	font-family: Roboto, helvetica, sans-serif;
+    margin: 1rem;
 }
 
 header,
@@ -27,10 +36,18 @@ main {
     gap: 20px;                     /*Add some space between the columns (optional)  */
 }
 
+section {
+    padding: 1rem;
+}
+
 h2 {
 	color: navy;
 	text-align: left;
     grid-column: 1/3;    /*Span across both columns*/
+}
+
+h3 {
+	margin-bottom: 0.5rem;
 }
 
 article p {
@@ -40,7 +57,7 @@ article p {
 .callout {
 	color: #bbc4bb;
 	background-color: #581214;
-    padding:25px;
+    padding:15px;
     grid-column: 1 / 3; /*make the callout stretch across both columns*/       
 } 
 
