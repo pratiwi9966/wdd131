@@ -2,7 +2,8 @@
 :root {
     --background-color: #52796F;
     --second-background-color: #84A98C;
-    --text-color: black;
+    --text-color: #0F0F0F;
+    --fotter-color: #AD8690;
 }
 
 /*---------General Styles-----------------*/
@@ -100,7 +101,7 @@ main {
 /*---------Footer-----------------*/
 footer {
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--fotter-color);
     text-align: center;
     display:flex;
     flex-direction: column;
