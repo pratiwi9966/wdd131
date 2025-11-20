@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131-Dynamic Web Fundamentals -  Country Page">
+        <title>WDD 131- Country Page </title>
+        <meta name="author" content="Wei-Ling Sun">
+
+        <link rel="stylesheet" href="styles/place.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Orchid Island - Taiwan</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="images/orchid-island-medium.webp" media="min-width: 1000px">
+                    <img src="images/orchid-island-small.webp" alt="orchid-island" width="500" height="250">
+                </picture>
+                
+                <section class="card" id="data-card">
+                    <h2>Data</h2>
+                    <div class="data-list">
+                        <strong>Area:</strong><span>45 km²</span>
+                        <strong>Population:</strong><span>About 5,000 people</span>
+                        <strong>Capital:</strong><span>main village Yeyou Village (椰油村)</span>
+                        <strong>Languages:</strong><span>Mandarin Chinese</span>
+                        <strong>Currency:</strong><span>New Taiwan Dollar</span>
+                        <strong>Time Zone:</strong><span>UTC+8</span>
+                        <strong>Calling Code:</strong><span>+886</span>
+                        <strong>Internet TLD:</strong><span>.tw (Taiwan)</span>
+                        
+                    </div>
+                </section>
+
+                <section class="card" id="weather-card">
+                    <h2>Weather</h2>
+                    <div id="svg-container">
+                        <img src="images/weather.svg" alt="" >
+                    </div>
+                
+                    <div class="data-list">
+                        <strong>Temperature: </strong><span>28°C</span>
+                        <strong>Condition: </strong><span>Partly Cloudy</span>
+                        <strong>Wind: </strong><span>15 km/h</span>
+                        <strong>Wind Chill: </strong><span>N/A</span>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> 🌻 WeiLing Sun 🌸 Taiwan</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
