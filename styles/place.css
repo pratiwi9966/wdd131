@@ -2,7 +2,7 @@
 :root {
     --background-color: #52796F;
     --second-background-color: #84A98C;
-    --text-color: #0F0F0F;
+    --text-color: black;
 }
 
 /*---------General Styles-----------------*/
@@ -106,7 +106,8 @@ footer {
     flex-direction: column;
     gap: 20px;
     padding: 30px;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 700px) {
