@@ -1,6 +1,6 @@
 
 // Weather ------------------------------------- //
-const temperature = 5; // °C
+const temperature = 28; // °C
 const windSpeed = 15;   // km/h
 
 // Function to calculate wind chill (Celsius version)
