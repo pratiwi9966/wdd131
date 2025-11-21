@@ -1,0 +1,69 @@
+
+body {
+  padding: 5%; /*Adds 5% space around the whole page content.*/
+}
+
+table {
+  width: 400px;/*fixes the table width*/
+  border: 1px solid rgba(0, 0, 0, 0.1);/*light gray outer border*/
+  border-collapse: collapse;
+  /*merges internal borders so they touch cleanly*/
+  /*合併邊框，使格子邊線不會雙重顯示*/
+
+  caption {
+    caption-side: bottom;/*Places the table caption below the table*/
+    font-size: smaller;/*Makes text smaller*/
+    padding: 0.2rem;/*Adds spacing between the table and the caption*/
+  }
+
+  th,
+  td {
+    padding: 0.5em 1rem; /*adds padding*/
+    border: 1px solid rgba(0, 0, 0, 0.1);/*adds border加上框線*/
+    white-space: pre;/*keeps whitespace (not important here)*/
+                      /*保留空白字元（對表格內容幾乎沒差）*/
+  }
+
+  thead th,
+  tbody td {
+    text-align: center;/*Centers text*/
+  }
+
+  /*Styles the entire header section*/
+  thead {
+    color: #fff;/*white text*/
+    background: #000;/*black background*/
+
+    /*For header cells*/
+    th {
+      padding: 1rem;/*larger padding*/
+      font-size: larger;/*larger font size*/
+    }
+
+    /*This selects the last row inside the <thead> and gives it a dark gray background.*/
+    /*(blank) | Basic | Premium | Deluxe*/
+    tr:nth-last-child(1) {
+      background-color: #333;
+    }
+  }
+
+  /*Applies to every even-numbered row in the <tbody>.*/
+  /*Creates a zebra stripe effect.*/
+  tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+}
+/*use it to fill the empty top-left cell of the second header row.*/
+.blank {
+  background-color: #000;
+}
+
+
+/*這個 HTML 產生一個定價比較表格，包含 Basic / Premium / Deluxe 服務的功能比較。
+CSS 用來：
+設定表格寬度
+調整邊框樣式
+設定表頭顏色（黑底白字）
+使用 nth-child 讓偶數列變灰色
+設定 caption 位置在表格底部
+使用 .blank class 讓特定儲存格變黑色方塊*/
