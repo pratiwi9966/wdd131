@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table example</title>
+        <link rel="stylesheet" href="table-example.css">
+    </head>
+
+    <body>
+        <!--<table></table> Creates a table.-->
+        <table> 
+            <!--<caption></caption> A title for the table (displayed below because of CSS)-->
+            <caption>Table 1: District 🥑 Sales Data</caption>
+
+            <!--<thead><thead> The table header section.-->
+            <thead>
+                <!--Row 1 -->
+                <!--colspan="2": This header cell spans both columns.-->
+                <!--scope="colgroup": Describes that this header applies to a group of columns.-->
+                <tr>
+                    <th colspan="2" scope="colgroup">Wasatch Sales</th>
+                </tr>
+                <!--Row 2 -->
+                <!--Column titles.-->
+                <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+
+            <!--<tbody></tbody> The body of the table (actual data).-->
+            <tbody>
+                <!--Each row:-->
+                <tr>
+                    <td>July</td>
+                    <td>3,000</td>
+                </tr>
+                <!--One special class:-->
+                <!--So August’s amount will be highlighted.-->
+                <tr>
+                    <td>August</td>
+                    <td class="highlight">8,000</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>4,000</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>2,000</td>
+                </tr>
+            </tbody>
+        </table> 
+    </body>
+</html>
