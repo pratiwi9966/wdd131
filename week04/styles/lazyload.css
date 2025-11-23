@@ -1,0 +1,45 @@
+:root {
+    --background-color: #52796F;
+    --second-background-color: #84A98C;
+    --text-color: #0F0F0F;
+    --fotter-color: #FFFFFF;
+}
+
+h1 {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+figure {
+    width: 100%;
+    animation: fade 15s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*---------Footer-----------------*/
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    font-weight: 400;
+}
