@@ -17,6 +17,8 @@ main {
     flex-direction: column;
 }
 
+/*Fade Animation*/
+/*This makes images smoothly appear when they load.*/
 figure {
     width: 100%;
     animation: fade 15s;
