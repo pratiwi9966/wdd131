@@ -1,0 +1,45 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Acme", sans-serif;
+  border-bottom: 1px solid #bbb;/*title underlined*/
+}
+
+/*Removes double borders and gives a clean outer border.*/
+table {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/*Column headers have a black background and white text.*/
+th {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*Alternates row colors (“zebra stripes”) for easier reading.*/
+tr:nth-child(odd) {
+  background-color: #bed;
+}
+
+/*Changes row color when you hover your mouse over it.*/
+tr:hover {
+  background-color: #ace;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}

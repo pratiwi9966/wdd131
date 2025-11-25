@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript object</title>
+
+        <link rel="stylesheet" href="javascript-object.css">
+        <script src="javascript-objects.js" defer></script>
+    </head>
+
+    <body>
+        <!--shows the page title-->
+        <h1>JavaScript Objects</h1>
+
+        <!--creates a "table" to display course information.-->
+        <!--id="sections" gives the table a name so JavaScript can find it.-->
+        <table id="sections">
+        <!--<caption> will display the course name (filled in by JavaScript).-->    
+        <caption id="courseName"></caption>
+            <!--<thead> contains the column headers.-->
+            <thead>
+                <tr>
+                <th>Section</th>
+                <th>Enrollment</th>
+                <th>Instructor</th>
+                </tr>
+            </thead>
+
+            <!--<tbody> is empty — JavaScript will fill it with sections data.-->
+            <tbody></tbody>
+        </table>
+    </body>
+    <!--So the HTML is the empty shell, and JavaScript will add the actual data.-->
+</html>

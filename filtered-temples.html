@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131-Dynamic Web Fundamentals - Temple Picture Album">
+        <title>WDD 131-Temple Picture Album </title>
+        <meta name="author" content="Wei-Ling Sun">
+
+         <!-- CSS -->
+        <link rel="stylesheet" href="styles/temples.css">
+        <link rel="stylesheet" href="styles/temples-large.css">
+
+        <!-- JavaScript -->
+        <script src="scripts/temples.js" defer></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <strong>Temple Album</strong>
+            <button aria-label="Menu" type="button" id="menu"></button>
+            <!--Each link is used to filter temples dynamically (Old, New, Large, Small, Home).-->
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
+            </nav>   
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Home</h1>
+            <!-- JavaScript will generate and insert temple cards from 
+             the temples array into this empty container -->
+            <div id="gallery"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; <span id="currentYear"></span> 🍂 WeiLing Sun 🍂 Fruit Heights UT</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
