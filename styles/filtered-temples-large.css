@@ -1,0 +1,24 @@
+/* large view navigation ************************************/
+@media (min-width: 740px) {
+	header {
+		display: flex;
+        flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+        nav {
+            display: flex;
+            flex-direction: row;
+	    }
+	}
+
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+
+    main {
+        max-width: 1000px;
+
+    }
+	
+}

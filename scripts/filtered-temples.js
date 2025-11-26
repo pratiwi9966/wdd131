@@ -1,14 +1,15 @@
 
 
-
 /* ============================================================
-   1. Responsive Navigation Menu (Hamburger Menu)
+   Responsive Navigation Menu (Hamburger Menu)
    ============================================================ */
 
 // Select the hamburger button   
 const hamButton = document.querySelector('#menu');
 // Select the nav element
 const navigation = document.querySelector('nav');
+// Select the gallery element
+const gallery = document.querySelector('#gallery');
 
 // Add a click event to open/close the navigation menu
 hamButton.addEventListener('click', () => {
@@ -17,7 +18,7 @@ hamButton.addEventListener('click', () => {
 });
 
 /* ============================================================
-   2. Temple Data Array
+   Temple Data Array
    ============================================================ */
 const temples = [
   {
@@ -86,12 +87,12 @@ const temples = [
     "https://churchofjesuschristtemples.org/assets/img/temples/taipei-taiwan-temple/taipei-taiwan-temple-8302.jpg"
   },
   {
-    templeName: "Newport Beach California Temple",
-    location: "California, United States",  
-    decation: "2005, August, 28",
-    area: 17800,
+    templeName: "Idaho Falls Temple",
+    location: "Idaho, United States",  
+    decation: "1945, September, 23",
+    area: 85624,
     imageUrl:
-    "https://churchofjesuschristtemples.org/newport-beach-california-temple/photographs/#Official-10"
+    "https://churchofjesuschristtemples.org/assets/img/temples/idaho-falls-idaho-temple/idaho-falls-idaho-temple-1903.jpg"
   },
   {
     templeName: "Apia Samoa Temple",
@@ -99,22 +100,63 @@ const temples = [
     decation: "2005, September, 9",
     area: 18691,
     imageUrl:
-    "https://churchofjesuschristtemples.org/apia-samoa-temple/photographs/#Official-9"
+    "https://churchofjesuschristtemples.org/assets/img/temples/apia-samoa-temple/apia-samoa-temple-13903.jpg"
   }
 ];
 
+// Display ALL temples when the page loads
+displayTemplesCard(temples)
+
 /* ============================================================
-   3. Function: Display Temple Cards
+   Function: Display Temple Cards
+   ============================================================ */
+function displayTemplesCard(filteredTemples) { 
+  gallery.innerHTML = ""; //Clear gallery before inserting new cards
+
+  filteredTemples.forEach(temple => {
+
+    // Add the temple name
+    const name = document.createElement("h2");
+    name.textContent = temple.templeName;
+
+    // Add location
+    const location = document.createElement("p");
+    location.innerHTML = `<span>Location:<span> ${temple.location}`;
+
+    // Add dedicated date
+    const dedication = document.createElement("p");
+    dedication.innerHTML = `<span>Dedication:<span> ${temple.decation}`;
+
+    // Add area
+    const area = document.createElement("p");
+    area.innerHTML = `<span>Size:<span> ${temple.area} sq ft`;
+
+    // Add temple image
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
+
+    // Create a card <section>
+    const card = document.createElement("section");
+    card.classList.add("temple-card");
+
+    // Add all Elements to the card
+    card.append(name, location, dedication, area, img);
+    
+    // Add all elements to the card
+    gallery.append(card);
+  });
+  
+}
+  
+/* ============================================================
+   Navigation Filters
    ============================================================ */
 
 
 /* ============================================================
-   4. Navigation Filters
-   ============================================================ */
-
-
-/* ============================================================
-   5. Footer: Year + Last Modified
+   Footer: Year + Last Modified
    ============================================================ */
 // Create a new Date object for the current date and year
 const currentDate = new Date();
