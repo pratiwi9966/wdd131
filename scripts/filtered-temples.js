@@ -22,12 +22,12 @@ hamButton.addEventListener('click', () => {
    ============================================================ */
 const temples = [
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
+    templeName: "Bacolod Philippines Temple",
+    location: "Bacolod, Philippines",
+    dedicated: "2021, December, 11",
+    area: 26700,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/bacolod-philippines-temple/bacolod-philippines-temple-65909.jpg"
   },
   {
     templeName: "Manti Utah",
@@ -35,7 +35,7 @@ const temples = [
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-45813.jpg"
   },
   {
     templeName: "Payson Utah",
@@ -81,7 +81,7 @@ const temples = [
   {
     templeName: "Taipei Taiwan",
     location: "Taipei, Taiwan",  
-    decation: "1984, November, 17",
+    dedicated: "1984, November, 17",
     area: 9945,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/taipei-taiwan-temple/taipei-taiwan-temple-8302.jpg"
@@ -89,7 +89,7 @@ const temples = [
   {
     templeName: "Idaho Falls Temple",
     location: "Idaho, United States",  
-    decation: "1945, September, 23",
+    dedicated: "1945, September, 23",
     area: 85624,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/idaho-falls-idaho-temple/idaho-falls-idaho-temple-1903.jpg"
@@ -97,7 +97,7 @@ const temples = [
   {
     templeName: "Apia Samoa Temple",
     location: "Pesega, Apia, Samoa",  
-    decation: "2005, September, 9",
+    dedicated: "2005, September, 9",
     area: 18691,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/apia-samoa-temple/apia-samoa-temple-13903.jpg"
@@ -113,6 +113,7 @@ displayTemplesCard(temples)
 function displayTemplesCard(filteredTemples) { 
   gallery.innerHTML = ""; //Clear gallery before inserting new cards
 
+  // console.log(filteredTemples)
   filteredTemples.forEach(temple => {
 
     // Add the temple name
@@ -123,9 +124,9 @@ function displayTemplesCard(filteredTemples) {
     const location = document.createElement("p");
     location.innerHTML = `<span>Location:<span> ${temple.location}`;
 
-    // Add dedicated date
-    const dedication = document.createElement("p");
-    dedication.innerHTML = `<span>Dedication:<span> ${temple.decation}`;
+    // Add dedicated date*
+    const dedicated = document.createElement("p");
+    dedicated.innerHTML = `<span>Dedication:<span> ${temple.dedicated}`;
 
     // Add area
     const area = document.createElement("p");
@@ -142,7 +143,7 @@ function displayTemplesCard(filteredTemples) {
     card.classList.add("temple-card");
 
     // Add all Elements to the card
-    card.append(name, location, dedication, area, img);
+    card.append(name, location, dedicated, area, img);
     
     // Add all elements to the card
     gallery.append(card);
@@ -153,7 +154,53 @@ function displayTemplesCard(filteredTemples) {
 /* ============================================================
    Navigation Filters
    ============================================================ */
+//Select All <a> links inside the <nav> and loop through them
+document.querySelectorAll("nav a").forEach(link => {
 
+  // Add a click event listener to each link
+  link.addEventListener("click", (event) => {
+
+    event.preventDefault();
+    //Prevents the browser from reloading the page
+    //(because <a> normally tries to go to a new URL)
+
+    const filter = event.target.textContent;
+    //Get the text inside the clicked link
+    //Example: "Home", "Old", "New", "Large", "Small"
+
+    //  console.log(filter)
+    //============Filter Options===============
+    if (filter === "Home") {
+      //Show all temples
+      displayTemplesCard(temples);
+    }
+
+    else if (filter === "Old") {
+      //Show temples dedicated before 1900
+      const old = temples.filter((temple) => parseInt(temple.dedicated) < 1990);
+      displayTemplesCard(old);
+    }
+
+    else if (filter === "New") {
+      // Show temples dedicated AFTER 2000
+      const newtemples = temples.filter((temple) => parseInt(temple.dedicated) > 2000);
+      displayTemplesCard(newtemples);
+    }
+
+    else if (filter === "Large") {
+        // Show temples with area GREATER than 90,000 sq ft
+      const large = temples.filter((temple) => parseInt(temple.area) > 90000);
+      displayTemplesCard(large);
+    }
+   
+    else if (filter === "Small") { 
+      // Show temples with area LESS than 10,000 sq ft
+      const small = temples.filter((temple) => parseInt(temple.area) < 10000);
+      displayTemplesCard(small);
+    }
+
+  });
+});
 
 /* ============================================================
    Footer: Year + Last Modified

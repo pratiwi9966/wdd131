@@ -1,7 +1,7 @@
 /*----------Small screen-------------------------------*/
 :root {
-    --background-color: #0b1838;
-    --text-color: #c8ddf5;
+    --background-color: #0b1d39;
+    --text-color: #f8f5f0;
     --havor-background-color: #3a60a0;
     
 }
@@ -17,6 +17,7 @@
 body {
    font-family: "Tinos", serif;
    font-weight:400;
+   background-color: var(--text-color);
   
 }
 
@@ -122,9 +123,9 @@ main {
 
         /*Individual Temple Card*/
         .temple-card {
-            background-color: #ffff;
+            background-color: #D9E2EC;
             padding: 1.5rem;
-            border: 1px ridge #3a60a0; 
+            border: 2px solid #D4B88C;
             border-radius: 4px;
             text-align: left;
             box-shadow: 0 4px 6px rgba(0,0,0,0.15);
@@ -132,10 +133,30 @@ main {
 
         /*Temple Name*/
         .temple-card h2 {
-            
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #1c1c1c;
         }
 
-        
+        /* Temple Details */
+        .temple-card p {
+            font-family: "Tinos", serif;
+            font-size: 1rem;
+            margin: 0.2rem 0;
+        }
+
+        .temple-card p span {
+            font-weight: bold;
+        }
+
+        /*Temple Image*/
+        .temple-card img {
+            width: 100%;
+            height: 50%;
+            margin-top: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+        }
     }
 }
 
