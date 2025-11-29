@@ -104,6 +104,7 @@ const temples = [
   }
 ];
 
+
 // Display ALL temples when the page loads
 displayTemplesCard(temples)
 
@@ -168,9 +169,12 @@ document.querySelectorAll("nav a").forEach(link => {
     //Get the text inside the clicked link
     //Example: "Home", "Old", "New", "Large", "Small"
 
-    //  console.log(filter)
-    //============Filter Options===============
+    
+    // console.log(filter)
+       //============Filter Options===============
     if (filter === "Home") {
+      document.getElementById("page-title").textContent = "Temples Gallery";
+
       //Show all temples
       displayTemplesCard(temples);
     }
