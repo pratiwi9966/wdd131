@@ -1,0 +1,67 @@
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /*Means the body is as tall as the entire browser window.*/
+  font-family: Acme, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 1rem;
+}
+
+/*This makes the main content look like a light-gray card.*/
+main {
+  margin: 1rem;/*space outside the box*/
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;/*space inside the box*/
+  background: #eee; /*light gray*/
+}
+
+form {
+  text-align: center;
+}
+
+input[type=text] {
+  padding: 0.65rem;/*Makes the input box bigger*/
+  font-size: 1.1rem;/*Text inside is bold*/
+  font-weight: 700;
+  border: 1px solid #777;
+  background-color: #eee;
+}
+
+/*Change input color when valid or invalid
+ This gives instant feedback to the user.*/
+input[type=text]:valid {
+  background-color: lightgreen;
+  color: darkgreen;
+  /*If the user enters something that matches the pattern → The input turns green.*/
+}
+
+input[type=text]:invalid {
+  background-color: pink;
+  color: indianred;
+  /*If it does NOT match the pattern → The input turns pink.*/
+}
+
+/* Adds space between the label and the input box.*/
+label {
+  margin-right: 1rem;
+} 
+
+/*Slight indent*/
+p {
+  margin-left: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/*Makes code text smaller so it fits on the page better.*/
+code {
+  font-size: .7rem;
+}
+
+/*但你也可以用 CSS 改成粗的、虛線、顏色不同的等等。*/
+/* hr {
+  border: 2px dashed purple;
+} */

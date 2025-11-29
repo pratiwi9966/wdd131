@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Pattern Testing</title>
+    <!-- CSS -->
+        <link rel="stylesheet" href="form-input.css">
+  </head>
+
+  <body>
+    <main>
+      <!--the main heading-->
+      <h1>Form Input Pattern Attribute Testing</h1>
+        <!--The paragraphs explain how to use the page-->
+        <p> 1️⃣ In the HTML panel, enter a vaild, input pattern.<br> 
+            The default pattern is 6 to 10 characters inclusive with at least one number,<br> 
+            one special character, one upper case and one lower case.
+        </p>
+        <p><code>pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,10}$"</code></p>
+        <p> 2️⃣ In the preview panel, enter a test value in the input field.</p>
+        <p> 3️⃣ The input text and border will be green if the input meets the requirements of the pattern.</p>
+      <hr> <!--Horizontal Rule-->
+      <!--想像 <hr> 就像你筆記本中的「畫一道線」，把內容分段、更清楚、更好讀。-->
+      
+        <!--Form element-->
+        <!--This creates a form (no submit button here — you're only testing input).-->
+        <form>
+        
+          <label for="test">Enter Test Characters: </label>
+          <!--The label is connected to the input using for="test" and id="test".-->
+          <!--So if the user clicks the label, the input field gets focus.-->
+          <input type="text" id="test" name="test" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,10}$" 
+                title="6 to 10 characters inclusive with at least on ne number, one special 
+                      character, one upper case and one lower case letter.">
+                <!--pattern attribute-->
+        </form>
+    </main>
+    <!-- This example pattern: This pattern allows alphanumeric characters 
+     (both uppercase and lowercase letters and digits 0-9) and the special characters !@#$%^&*()_+-=. 
+     It allows a minimum length of 1 character and a maximum length of 20 characters. 
+     It also ensures that there is only one special character in the input field, 
+     and it is not the first or last character.  -->
+  </body>
+</html>
+
+<!--Your page lets you:
+  1.Type a word in the input box
+  2.The browser checks if it matches the password rule
+  3. Browser shows:
+    ✔ green = valid
+    ❌ red = invalid
+No JavaScript is required — all validation happens with HTML.-->
