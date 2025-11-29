@@ -169,35 +169,43 @@ document.querySelectorAll("nav a").forEach(link => {
     //Get the text inside the clicked link
     //Example: "Home", "Old", "New", "Large", "Small"
 
+    document.getElementById("page-title").textContent = filter === 'Home' ? 'Temple Gallery' : `${filter} Temple Gallery`;
+    //if statement in one line: comparison ? if true : if false 
+    // ternary
+
     
     // console.log(filter)
        //============Filter Options===============
     if (filter === "Home") {
-      document.getElementById("page-title").textContent = "Temples Gallery";
+      // document.getElementById("page-title").textContent = "Temple Gallery";
 
       //Show all temples
       displayTemplesCard(temples);
     }
 
     else if (filter === "Old") {
+      // document.getElementById("page-title").textContent = "Old Temple Gallery";
       //Show temples dedicated before 1900
       const old = temples.filter((temple) => parseInt(temple.dedicated) < 1990);
       displayTemplesCard(old);
     }
 
     else if (filter === "New") {
+      // document.getElementById("page-title").textContent = "New Temple Gallery";
       // Show temples dedicated AFTER 2000
       const newtemples = temples.filter((temple) => parseInt(temple.dedicated) > 2000);
       displayTemplesCard(newtemples);
     }
 
     else if (filter === "Large") {
+      // document.getElementById("page-title").textContent = "Large Temple Gallery";
         // Show temples with area GREATER than 90,000 sq ft
       const large = temples.filter((temple) => parseInt(temple.area) > 90000);
       displayTemplesCard(large);
     }
    
     else if (filter === "Small") { 
+      // document.getElementById("page-title").textContent = "Small Temple Gallery";
       // Show temples with area LESS than 10,000 sq ft
       const small = temples.filter((temple) => parseInt(temple.area) < 10000);
       displayTemplesCard(small);
