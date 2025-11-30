@@ -18,6 +18,7 @@ body {
     font-family: "Tinos", serif;
     font-weight:350;
     background-image: url(island1-large.webp);
+    background-position: bottom; /*value: center, 50%,30%, bottom center */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -52,7 +53,7 @@ nav {
     }
     
     a {
-        color: var(--text-color);
+        color: #FFFFFF;
         text-decoration: none;
         font-weight: 600;
         /*make the link bigger easier to click,look more like a box*/
@@ -102,9 +103,12 @@ main {
     } */
 /* } */
 
+h1 {
+    color: ;
+}
 
 #card {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-radius: 5px;
     line-height: 28px;
