@@ -1,0 +1,189 @@
+
+
+:root {
+  --primary: #3a083d;        /* deep plum */
+  --secondary: #d9d1d8;      /* soft lavender-gray */
+  --accent: #f5f1f6;         /* light neutral */
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: white;
+  color: var(--text-dark);
+}
+
+/* ------------------------------
+    Header Styling
+------------------------------ */
+header {
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+/* ------------------------------
+    Form Container
+------------------------------ */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+form {
+  width: min(900px, 95%);
+  background-color: var(--secondary);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ------------------------------
+    Labels & Inputs
+------------------------------ */
+label {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid #bcb4bb;
+  background: white;
+}
+
+/* ------------------------------
+    Fieldsets
+------------------------------ */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 1.5rem;
+
+  legend {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+    /* ------------------------------
+      Rating Stars
+      -------------------------- */
+  #rating-star {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+  margin-top: 0.3rem;
+  width: 26px;
+  height: 26px;
+  }
+
+  /* ------------------------------
+    Checkbox List
+    -------------------------- */
+  input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  padding: 25px;
+  margin-right: 0.5rem;
+  }
+
+  #checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+}
+
+/* ------------------------------
+    Text Area
+    -------------------------- */
+#reviewText {
+  width: 100%;
+  height: 200px;
+}
+
+/* ------------------------------
+    Submit Button
+------------------------------ */
+
+input[type="submit"] {
+  width: 100%;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  border: none;
+  background: white;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 2px solid var(--primary);
+
+  &:hover {
+  background: var(--primary);
+  color: white;
+  }
+}
+
+/* ------------------------------
+    review.html
+------------------------------ */
+.card { 
+  background:#f6f2f7; 
+  border-radius:12px; 
+  padding:1.25rem; 
+  font-weight: 700;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06); }
+
+  #reviewCount {
+    color: navy;
+	  font-weight: bolder;
+	  font-size: larger;
+  }
+
+/* ------------------------------
+    Footer
+------------------------------ */
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
