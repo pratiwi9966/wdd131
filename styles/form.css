@@ -186,4 +186,103 @@ footer {
     font-size: 1.2rem;
 }
 
+/* ---------------------------------------------------
+   Mobile View 
+--------------------------------------------------- */
 
+@media (max-width: 480px) {
+
+  body {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  header {
+    padding: 1.5rem 1rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  form {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  }
+
+  label {
+    font-size: 1.05rem;
+    margin-top: 1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.85rem;
+    font-size: 1rem;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  /* -------------------------
+      Rating Section
+  ------------------------- */
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    #rating-star {
+      flex-direction: row;
+      justify-content: flex-start;
+      font-size: 1.3rem;
+
+      input[type="radio"] {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  /* -------------------------
+      Useful Feature Checkboxes
+  ------------------------- */
+  fieldset {
+
+    #checkbox {
+      font-size: 1.05rem;
+      margin-top: 0.3rem;
+
+      input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  /* -------------------------
+      Submit Button
+  ------------------------- */
+  input[type="submit"] {
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  /* -------------------------
+      Footer
+  ------------------------- */
+  footer {
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+    gap: 10px;
+  }
+}
