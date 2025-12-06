@@ -93,7 +93,7 @@ fieldset {
     /* ------------------------------
       Rating Stars
       -------------------------- */
-  #rating-star {
+  .rating-star {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +118,7 @@ fieldset {
   margin-right: 0.5rem;
   }
 
-  #checkbox {
+  .checkbox {
     display: flex;
     align-items: center;
     font-size: 1.1rem;

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WDD 131-Dynamic Web Fundamentals - Product Review Form">
+    <meta name="author" content="Wei-Ling Sun">
     <title>Product Review</title>
+
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/form.css">
@@ -25,18 +27,18 @@
         <!-- Product Name -->
         <label><strong>Product Name</strong> 
         <select id="productSelect" name="ProductSelect" required>
-            <option value="">Choose a Product...</option>
+            <option value="" disabled selected>Select a Product...</option>
         </select>
         </label>
 
         <!-- Overall Rating -->
          <fieldset>
             <legend><strong>Overall Rating</strong></legend>
-              <label id="rating-star"><input type="radio" name="rating" value="1" required> ⭐</label>
-              <label id="rating-star"><input type="radio" name="rating" value="2" required> ⭐⭐</label>
-              <label id="rating-star"><input type="radio" name="rating" value="3" required> ⭐⭐⭐</label>
-              <label id="rating-star"><input type="radio" name="rating" value="4" required> ⭐⭐⭐⭐</label>
-              <label id="rating-star"><input type="radio" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label>
+              <label class="rating-star"><input type="radio" id="radio1" name="rating" value="1" required> ⭐</label>
+              <label class="rating-star"><input type="radio" id="radio2" name="rating" value="2" required> ⭐⭐</label>
+              <label class="rating-star"><input type="radio" id="radio3" name="rating" value="3" required> ⭐⭐⭐</label>
+              <label class="rating-star"><input type="radio" id="radio4" name="rating" value="4" required> ⭐⭐⭐⭐</label>
+              <label class="rating-star"><input type="radio" id="radio5" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label>
          </fieldset>
 
         <!-- Date of Installation -->
@@ -46,10 +48,10 @@
          <fieldset>
               <legend><strong>Which features did you find useful in the product?</strong>
                 <em>(Check all that apply)</em></legend>
-              <label id="checkbox"><input type="checkbox" name="features" value="durability"> Durability</label>
-              <label id="checkbox"><input type="checkbox" name="features" value="easeOfUse"> Ease Of Use</label>
-              <label id="checkbox"><input type="checkbox" name="features" value="performance"> Performance</label>
-              <label id="checkbox"><input type="checkbox" name="features" value="design"> Design</label>  
+              <label class="checkbox"><input type="checkbox" id="checkbox1" name="features" value="durability"> Durability</label>
+              <label class="checkbox"><input type="checkbox" id="checkbox2" name="features" value="easeOfUse"> Ease Of Use</label>
+              <label class="checkbox"><input type="checkbox" id="checkbox3" name="features" value="performance"> Performance</label>
+              <label class="checkbox"><input type="checkbox" id="checkbox4" name="features" value="design"> Design</label>  
          </fieldset>
 
         <!-- Written Review -->
