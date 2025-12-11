@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Orchid Island Time</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .clock-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .clock-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .clock-row div {
+      background: #f3f4f6;
+      padding: 10px;
+      border-radius: 8px;
+      width: 30%;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    #ampm {
+      margin-top: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    #date {
+      margin-top: 10px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="clock-box">
+  <h3>Time in Taiwan</h3>
+
+  <!-- Separate time fields -->
+  <div class="clock-row">
+    <div id="hours">--</div>
+    <div id="minutes">--</div>
+    <div id="seconds">--</div>
+  </div>
+
+  <!-- AM/PM display -->
+  <div id="ampm">--</div>
+
+  <!-- Date -->
+  <div id="date">Loading date…</div>
+</div>
+
+<script>
+  const timeZone = "Asia/Taipei";
+
+  const hourEl = document.getElementById("hours");
+  const minEl = document.getElementById("minutes");
+  const secEl = document.getElementById("seconds");
+  const ampmEl = document.getElementById("ampm");
+  const dateEl = document.getElementById("date");
+
+  function updateClock() {
+    const now = new Date();
+
+    // Get time in Taiwan, 12-hour format
+    const options = { timeZone, hour12: true };
+    const timeString = now.toLocaleTimeString("en-US", options);
+
+    // Example: "3:07:15 PM"
+    const [timePart, ampm] = timeString.split(" ");
+    const [h, m, s] = timePart.split(":");
+
+    hourEl.textContent = h;
+    minEl.textContent = m;
+    secEl.textContent = s;
+    ampmEl.textContent = ampm;
+
+    const dateOptions = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      timeZone
+    };
+    dateEl.textContent = now.toLocaleDateString("en-US", dateOptions);
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
