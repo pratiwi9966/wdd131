@@ -49,7 +49,7 @@ document.getElementById("currentYear").textContent = currentYear;
 //    (Using the built-in document.lastModified property)
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
-//Array function
+//Array function & object
 const greetings = ['Welcome!', 'Hello!', 'Nihao!','大家好!','我不好!','你好!'];
 
 function getRandomGreeting() {
@@ -60,6 +60,29 @@ function getRandomInteger(max) {
   return Math.floor(Math.random() * max);
 }
 
-if (!location.pathname.endsWith('references.html')) {
+const pages = [
+  {
+    name: 'home.html',
+    greeting: true
+  },
+  {
+    name: 'penghu.html',
+    greeting: true
+  },
+  {
+    name: 'orchid-island.html',
+    greeting: true
+  },
+  {
+    name: 'references.html',
+    greeting: false
+  }
+]
+
+const pagesWithGreetings = pages
+  .filter((page) => page.greeting)
+  .map((page) => page.name);
+
+if (pagesWithGreetings.some((page) => location.pathname.endsWith(page))) {
   document.getElementById('greeting').textContent = getRandomGreeting();
 }
