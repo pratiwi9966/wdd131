@@ -89,6 +89,10 @@ header {
     width: 50%;
     padding: 40px 25px;
 
+    #greeting {
+      font-size: 30px;
+    }
+
     .subtitle {
       letter-spacing: 4px;
       font-size: 1.5rem;
@@ -125,6 +129,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    img {
+      justify-self: center;
+    }
   }
 
   h2 {

@@ -48,3 +48,18 @@ document.getElementById("currentYear").textContent = currentYear;
 // Show the document’s last modified date/time
 //    (Using the built-in document.lastModified property)
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+
+//Array function
+const greetings = ['Welcome!', 'Hello!', 'Nihao!','大家好!','我不好!','你好!'];
+
+function getRandomGreeting() {
+  return greetings[getRandomInteger(greetings.length)];
+}
+
+function getRandomInteger(max) {
+  return Math.floor(Math.random() * max);
+}
+
+if (!location.pathname.endsWith('references.html')) {
+  document.getElementById('greeting').textContent = getRandomGreeting();
+}
