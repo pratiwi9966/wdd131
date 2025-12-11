@@ -17,7 +17,19 @@ hamButton.addEventListener('click', () => {
 });
 
 
+// Increment review counter
+let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
+reviewCount++;
+localStorage.setItem('reviewCount', reviewCount);
 
+
+// Display the number of reviews
+document.addEventListener('DOMContentLoaded', () => {
+  const counterEl = document.getElementById('reviewCount');
+  if (counterEl) {
+    counterEl.textContent = reviewCount;
+  }
+});
 
 
 

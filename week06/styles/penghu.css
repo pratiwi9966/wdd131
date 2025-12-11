@@ -2,123 +2,16 @@
   --green-dark: #2f3a32;
   --green-soft: #ccd3cd;
   --text-dark: #222;
-  --text-light: #FFDAB9;
-  --radius: 12px;
-  --transition: 0.3s ease;
-  --max-width: 1200px;
+  --text-light: #fff;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #f4f4f4;
-  color: var(--text-dark);
-  line-height: 1.6;
-}
 
 header {
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url(../images/penghu-0.webp);
-  background-size: cover;
- 
-  
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(140, 145, 142, 0.3);
-
-    /* when the button is clicked - 
-    the open class is toggled (added/removed) */
-     &.open {
-        display: flex;
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      padding-left: 20px;
-      padding-top: 20px;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 12px;
-      transition: var(--transition);
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-
-  
-  .hero-content {
-    max-width: cover;
-
-    .subtitle {
-      letter-spacing: 4px;
-      font-size: 1.5rem;
-      padding-top: 40px;
-      padding-left:40px;
-    }
-
-    h1 {
-      font-size: 4rem;
-      font-weight: 600;
-      margin: 0.5rem 0;
-      padding-left: 30px;
-    }
-    
-    .desc {
-      margin: 1rem 0 2rem;
-      font-size: 1.2rem;
-      padding-left: 30px;
-    }
-  }
+  background-image: linear-gradient(to right, rgb(65, 31, 65), 70%, transparent), url(../images/penghu-0.webp);
 }
 
-/* small view navigation */
-#menu {
-  font-size: 1.5rem;
-  border: 0;
-  background: none;
-  color: var(--green-soft);
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-#menu::before {
-  content: "☰";
-}
-
-#menu.open::before {
-  content: "❌";
-}
-  
-/*---------Main-----------------*/
-
-
-/*---------Footer-----------------*/
 footer {
-    background-color: var(--green-dark);
+    background-color: rgb(58, 9, 58);
     color: var(--green-soft);
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-    font-weight: 400;
+
 }

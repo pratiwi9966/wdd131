@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f4f4f4;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-size: cover;
+  background-position: bottom;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  #top-content {
+    align-items: center;
+    background-color: rgba(140, 145, 142, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    /* when the button is clicked - 
+    the open class is toggled (added/removed) */
+    &.open {
+      display: flex;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 12px;
+      transition: var(--transition);
+
+      &:hover {
+        /* opacity: 0.4; */
+        color: palevioletred;
+      }
+    }
+  }
+
+  /* small view navigation */
+  #menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--green-soft);
+    position: absolute;
+    /* top: 1rem; */
+    right: 1rem;
+    display: none;
+  }
+
+  #menu::before {
+    content: "☰";
+    color: black;
+  }
+
+  #menu.open::before {
+    content: "❌";
+  }
+  
+  .hero-content {
+    width: 50%;
+    padding: 40px 25px;
+
+    .subtitle {
+      letter-spacing: 4px;
+      font-size: 1.5rem;
+      
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 4rem;
+      padding: 30px;
+    }
+    
+    .desc {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+main {
+  padding: 30px;
+}
+
+
+  
+.card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+}
+
+
+/*---------Footer-----------------*/
+footer {
+    background-color: var(--green-dark);
+    color: var(--green-soft);
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    font-weight: 400;
+
+    #reviewCount {
+    /* color: navy; */
+	  font-weight: bolder;
+	  font-size: larger;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    #menu {
+      display: block;
+    }
+    
+    nav {
+      background-color: rgba(140, 145, 142, 10);
+       backdrop-filter: blur(8px);
+      display: none;
+      flex-direction: column;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+  }
+ 
+  .card {
+    > div {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

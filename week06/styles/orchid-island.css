@@ -1,0 +1,11 @@
+
+:root {
+  --green-dark: #2f3a32;
+  --green-soft: #ccd3cd;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+header {
+  background-image: linear-gradient(to right, black, 70%, transparent), url(../images/home-orchid-island.webp);
+}

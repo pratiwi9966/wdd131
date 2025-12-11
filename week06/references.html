@@ -8,7 +8,8 @@
     <meta name="author" content="Wei-Ling Sun">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/taiwan.css">
+     <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/home.css">
     
 
     <!-- JavaScript -->
@@ -18,21 +19,22 @@
   <body>
     <!-- Header -->
     <header>
-      <button aria-label="Menu" type="button" id="menu"></button>
-      <nav>
+      <div id="top-content">
+        <button aria-label="Menu" type="button" id="menu"></button>
         <h2 class="logo"> WEILING</h2>
-          <a href="taiwan.html">Home</a>
-          <a href="penghu.html">Penghu Island</a>
-          <a href="kinmen.html">Kinmen Island</a>
-          <a href="orchid.html">Orchid Island</a>
-          <a href="references.html">References</a>
-      </nav>  
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="penghu.html">Penghu Island</a>
+            <a href="orchid.html">Orchid Island</a>
+            <a href="references.html">References</a>
+        </nav> 
+      </div> 
 
       <!-- <img src="images/home-island.webp" alt="An Island side of view" loading="lazy"> -->
       
       <div class="hero-content">
         <p class="subtitle">WELCOME TO</p>
-        <h1>Penghu Island</h1>
+        <h1>Taiwan's Outer Island</h1>
         <p class="desc">
           Discover Taiwan's outer islands—where friendly communities, stunning seascapes,
           and laid-back island life come together.
@@ -44,6 +46,14 @@
     <main class="container">
       <h1>Sources: </h1>
       <h2>Home: </h2>  
+        <ol>
+          <li><a href="https://tournews.tw/archives/26247">
+            野性蘭嶼浪漫寫真 Pongso No tao達悟人之島輕旅行 @去旅行新聞網
+          </a></li>
+          <li><a href="https://www.takeyourbackpack.com/backpacking-in-taiwan/visit-lanyu/?utm_source=chatgpt.com">
+            Lanyu Backpacking Guide 2026: Top Highlights
+          </a></li>
+        </ol>
       <hr>
       <h2>Penghu Island: </h2>
         <ol>
@@ -59,11 +69,31 @@
             2025必買澎湖伴手禮TOP10:仙人掌冰心糕、黑糖糕、菊花餅等，買哪家最好吃？就選在地人推薦的澎湖名產店家清單！</a></li>
             <li><a href="https://www.hotelscombined.com.tw/news/%E6%BE%8E%E6%B9%96-top5-%E6%99%AF%E9%BB%9E/">
             【澎湖自由行】5大打卡景點推薦,就算只玩本島也很精彩! - 部落格</a></li>
-
         </ol>
         <hr>
 
       <h2>Orchid Island: </h2>
+        <ol>
+          <li><a href="https://ketagalanmedia.com/2016/05/26/discovering-taiwans-offshore-islands-part-1-tw/">
+           發現台灣離島之美-上 
+          </a></li>
+          <li><a href="https://taiwaneverything.cc/2016/05/15/paradise-in-the-pacific-ocean/">
+            LANYU (Orchid Island) - Paradise in the Pacific Ocean - Taiwan Everything
+          </a></li>
+          <li><a href="https://smiletaiwan.cw.com.tw/article/1583">
+            蘭嶼招魚祭，為飛魚季揭開序曲 - 蘭嶼蘭恩傳媒網 - 微笑台灣 - 用深度旅遊體驗鄉鎮魅力
+          </a></li>
+          <li><a href="https://www.spirittour.com.tw/businesspartner/tao-iranmeylek/#">
+            【蘭嶼】Tao Iranmeylek文化藝術團\長髮舞表演 蘭嶼的傳統達悟族文化舞蹈，
+            平常只有祭典時才能看到的甩髮舞、古調吟唱、禮杖舞等，由蘭嶼當地各部落組成的 
+            Tao Iranmeylek文化藝術團,老師們精心排練,將達悟傳統文化之美呈現在旅人面前。
+            欣賞達悟長髮舞、禮杖舞、古調吟唱精華演出,傳統達悟族文化表演,增添蘭嶼之旅的文化深度,
+            只有在蘭嶼才能看到的達悟族文化表演。
+          </a></li>
+          <li><a href="https://www.storm.mg/lifestyle/464057">
+            蘭嶼在玩啥花招？以後消費可用「芋頭幣」、「達悟幣」？乍聽無厘頭，背後故事其實很動人 | 數位時代 | 風生活 - 風傳媒
+          </a></li>
+        </ol>
       
 
   </main>
@@ -71,6 +101,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; <span id="currentYear"></span> 🍂 WeiLing Sun 🍂 Fruit Heights UT</p>
+        <p><span>Number of Visits: <span id="reviewCount">0</span></p>
         <p id="lastModified"></p>
     </footer>
     
